@@ -1,0 +1,143 @@
+*{
+    box-sizing: border-box;
+    padding: 0; 
+    margin: 0;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    
+   
+}
+body{
+    min-height:100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EEE;
+}
+.container{
+    width:1200px;
+    height:600px;
+    display:grid;
+    grid-template-columns:25% 25% 25% 25%;
+    grid-template-rows: 300px 300px;
+gap: 30px;
+grid-template-areas: "one one two five" "three four four five";
+
+
+    
+}
+.card-one , .card-two, .card-three , .card-four , .card-five {
+    border-radius: 10px;
+    
+}
+.text-content{
+    padding:25px;
+}
+
+.card-one{
+    
+    grid-area: one;
+    background-color: hsl(263, 55%, 52%);
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 80% 5%;
+
+}
+h3{
+    word-spacing: 3px;
+}
+h3 , p {
+
+    
+    margin-top:20px;
+    
+    
+}
+p{
+    font-size:13px;
+    line-height:1.6;
+}
+.card-two{
+    grid-area: two;
+    background-color:  hsl(217, 19%, 35%);
+
+}
+.card-three{
+    grid-area:three;
+    background-color: white;
+
+}
+.card-four{
+    grid-area:four;
+    background-color: hsl(219, 29%, 14%);
+
+}
+.card-five{
+    grid-area:five;
+    background-color: white;
+}
+img{
+    width:50px;
+    height:50px;
+    border-radius: 50px;
+}
+
+.person-details{
+    display:flex;
+    align-items: center;
+    column-gap: 10px;
+
+
+}
+.card-five h3 +p , .card-three h3 +p{
+    color: hsl(217, 19%, 35%);
+    opacity: 70%;
+}
+
+.card-one h3+p , .card-two h3+p , .card-four h3+p{
+    color:white;
+    opacity: 70%;
+
+} 
+.card-five h3, .card-three h3{
+    color:  hsl(217, 19%, 35%);
+
+}
+.card-one h3 , .card-two h3, .card-four h3 {
+        color:white;
+    margin-right:80px;
+}
+.card-one img , .card-four img {
+    border: 3px solid violet
+}
+.card-five #name , .card-three #name{
+    color:hsl(217, 19%, 35%);
+}
+.card-five #verify,.card-three #verify  {
+    color:hsl(217, 19%, 35%);
+    opacity: 50%;
+    
+
+}
+.card-one #name , .card-two #name , .card-four #name {
+    color:white;
+}
+.card-one #verify , .card-two #verify , .card-four #verify{
+    color:white;
+    opacity:50%;
+}
+
+@media (max-width:375px) {
+    .container{
+        display:flex;
+        flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+height:2800px;
+margin: 20px;
+
+
+    }
+  
+}
+
